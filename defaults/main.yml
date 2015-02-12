@@ -1,0 +1,21 @@
+---
+# defaults file for confluence
+
+# psycopg2 needed to check superuser has password
+role_prerequisites:
+  - python-psycopg2
+confluence_version:   5.5.2
+confluence_baseurl:   http://www.atlassian.com/software/confluence/downloads/binary
+confluence_installer: atlassian-confluence-{{ confluence_version }}.tar.gz
+confluence_user:      confluence
+# use postgresql or mysql
+confluence_dbconnector: postgresql
+confluence_tmp:       /var/tmp
+confluence_installto: /opt
+confluence_datadir:   /srv/atlassian/confluence-data
+confluence_dbname:    confluence
+confluence_dbuser:    confluence
+# java settings
+confluence_xms:       256m
+confluence_xmx:       512m
+confluence_mps:       256m
